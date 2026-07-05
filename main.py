@@ -10,6 +10,7 @@ from mutagen.id3 import TIT2, TPE1, TALB, APIC, COMM, TXXX, TDOR, TCOM
 from mutagen.flac import Picture
 
 # ===================== 用户可自定义配置区 =====================
+CACHE_ROOT = r".\\"
 NAME_TEMPLATE = "{artist} - {title}"
 CACHE_API_INFO = True                # 开启元数据缓存（强烈建议开启）
 API_CACHE_FILE = ".netease_api_cache.json"
@@ -776,5 +777,4 @@ def batch_decrypt_sliced_nmsf(root_folder: str):
     close_log()
 
 if __name__ == "__main__":
-    cache_root = r"C:\Users\yaop\Desktop\test"
-    batch_decrypt_sliced_nmsf(cache_root)
+    batch_decrypt_sliced_nmsf(CACHE_ROOT)
